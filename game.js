@@ -1,4 +1,4 @@
-function getRandom(num){
+function getComputerChoice(num){
   let string = Math.floor(Math.random() * num)
    if(string == 0) {
     return 'rock'
@@ -10,5 +10,5 @@ function getRandom(num){
   
 }
 
-console.log(getRandom(3))
+console.log(getComputerChoice(3))
 
