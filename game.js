@@ -1,6 +1,25 @@
 let humanScore = 0;
 let computerScore = 0;
 
+function playRound(humanChoice, computerChoice){
+if (humanChoice === 'rock'  &&  computerChoice === 'paper'){
+  return console.log('You lose! Paper beats rock')
+} else if (humanChoice === 'paper' &&  computerChoice === 'scissors') {
+  return console.log('You lose! Scissors, beats paper') 
+   } else if (humanChoice === 'scissors' && computerChoice   ==='rock') {
+      return console.log('You lose! Rock beats scissors')
+    } else {
+       return console.log('It looks a tie!')
+    
+  }
+}
+
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
+
 function getComputerChoice(num){
   let string = Math.floor(Math.random() * num)
    if(string == 0) {
@@ -18,15 +37,15 @@ console.log(getComputerChoice(3))
 function getHumanChoice(){
   let string = prompt('Choose your weapon')
    if(string.toLowerCase() === 'rock'){
-    console.log(string)
+   return 'rock'
    } else if (string.toLowerCase() ==='paper'){
-    console.log(string)
+    return 'paper'
    } else if (string.toLowerCase() ==='scissors'){
-    console.log(string)
+    return 'scissors'
    } else {
-    console.log('Invalid input')
+    return 'Invalid input'
    }
   }
 
 
-getHumanChoice()
+//getHumanChoice()
