@@ -2,21 +2,25 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice){
-if (humanChoice === 'rock'  &&  computerChoice === 'paper'){
+console.log(computerSelection)
+  if (humanChoice === 'rock'  &&  computerChoice === 'paper'){
   return console.log('You lose! Paper beats rock')
 } else if (humanChoice === 'paper' &&  computerChoice === 'scissors') {
   return console.log('You lose! Scissors, beats paper') 
    } else if (humanChoice === 'scissors' && computerChoice   ==='rock') {
       return console.log('You lose! Rock beats scissors')
-    } else {
-       return console.log('It looks a tie!')
-    
-  }
+    } else if (humanChoice === 'paper'  &&  computerChoice === 'rock'){
+       return console.log('You win!')
+  }   else if (humanChoice === 'scissors' && computerChoice   ==='paper') {
+       return console.log('You win!')
+  }   else if (humanChoice === 'rock' && computerChoice  ==='scissors') {
+    return console.log('You win!')
+}  else return console.log('It is a tie!')
+
 }
 
-
 const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+const computerSelection = getComputerChoice(3);
 
 playRound(humanSelection, computerSelection);
 
@@ -32,7 +36,7 @@ function getComputerChoice(num){
   
 }
 
-console.log(getComputerChoice(3))
+//console.log(getComputerChoice(3))
 
 function getHumanChoice(){
   let string = prompt('Choose your weapon')
@@ -48,4 +52,4 @@ function getHumanChoice(){
   }
 
 
-//getHumanChoice()
+//console.log(getHumanChoice())
