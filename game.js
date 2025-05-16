@@ -1,10 +1,12 @@
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice(3);
 
-function playGame(){
-   
 let humanScore = 0;
 let computerScore = 0;
+
+function playGame(){
+   
+
 
 function playRound(humanChoice, computerChoice){
   console.log(computerSelection)
