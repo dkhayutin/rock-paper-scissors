@@ -35,23 +35,34 @@ playGame()
 playGame()
 playGame()
 
-switch (humanScore) {
-  case 3 : 
-  console.log('Congratulations! You have won the game!');
-  break; 
+function gameWinner(){
+  if (humanScore > computerScore) {
+    return console.log ('Congratulation, You are the winner')
+  } else if (humanScore < computerScore ) {
+    return console.log('Sorry, you have lost!')
+  } else  {
+    return console.log ('We have a tie game!')
+  }
 }
 
-switch (computerScore) {
-  case 3 : 
-  console.log('Sorry, the computer has won the game');
-  break; 
-}
+gameWinner()
+// switch (humanScore) {
+//   case  3 || 4 || 5 : 
+//   console.log('Congratulations! You have won the game!');
+//   break; 
+// }
 
-switch (humanScore && computerScore) {
-  case 2 :
-  console.log('We have a tie game!')
-  break;
-} 
+// switch (computerScore) {
+//   case 3 || 4 || 5 : 
+//   console.log('Sorry, the computer has won the game');
+//   break; 
+// }
+
+// switch (humanScore && computerScore) {
+//   case 2 :
+//   console.log('We have a tie game!')
+//   break;
+// } 
 
 
 function getComputerChoice(num){
