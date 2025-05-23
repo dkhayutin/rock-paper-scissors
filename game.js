@@ -1,15 +1,13 @@
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice(3);
-
 let humanScore = 0;
 let computerScore = 0;
 
 function playGame(){
-   
 
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice(3);
 
-function playRound(humanChoice, computerChoice){
-  console.log(computerSelection)
+ function playRound(humanChoice, computerChoice){
+  console.log(computerChoice)
     if (humanChoice === 'rock'  &&  computerChoice === 'paper'){
     return console.log('You lose! Paper beats rock') + computerScore++
   } else if (humanChoice === 'paper' &&  computerChoice === 'scissors') {
@@ -23,15 +21,38 @@ function playRound(humanChoice, computerChoice){
     }   else if (humanChoice === 'rock' && computerChoice  ==='scissors') {
       return console.log('You win!') + humanScore++
   }  else return console.log('It is a tie!')
-  }
-  playRound(humanSelection, computerSelection)
-   
+ 
+}
+
+  playRound(humanSelection,computerSelection)
+
+
 }
 
 playGame()
+playGame()
+playGame()
+playGame()
+playGame()
 
+switch (humanScore) {
+  case 3 : 
+  console.log('Congratulations! You have won the game!');
+  break; 
+}
 
-    
+switch (computerScore) {
+  case 3 : 
+  console.log('Sorry, the computer has won the game');
+  break; 
+}
+
+switch (humanScore && computerScore) {
+  case 2 :
+  console.log('We have a tie game!')
+  break;
+} 
+
 
 function getComputerChoice(num){
   let string = Math.floor(Math.random() * num)
@@ -62,3 +83,4 @@ function getHumanChoice(){
 
 
 //console.log(getHumanChoice())
+
