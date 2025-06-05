@@ -1,10 +1,27 @@
+const button1 = document.querySelector("#rock")
+button1.addEventListener("click", () => {
+alert('please goddamn')
+})
+
+const button2 = document.querySelector("#paper")
+button2.addEventListener("click", () => {
+alert('button test')
+})
+
+const button3 = document.querySelector("#scissors")
+button3.addEventListener("click", () => {
+alert('button test')
+})
+
 let humanScore = 0;
 let computerScore = 0;
+
 
 function playGame(){
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice(3);
+
 
  function playRound(humanChoice, computerChoice){
 
@@ -30,11 +47,13 @@ const computerSelection = getComputerChoice(3);
 
 }
 
+
 //  playGame()
 // playGame()
 // playGame()
 // playGame()
 // playGame()
+
 
 function getWinner(){
   if (humanScore > computerScore) {
