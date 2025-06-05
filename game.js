@@ -29,11 +29,11 @@ const computerSelection = getComputerChoice(3);
 
 }
 
-playGame()
-playGame()
-playGame()
-playGame()
-playGame()
+//  playGame()
+// playGame()
+// playGame()
+// playGame()
+// playGame()
 
 function getWinner(){
   if (humanScore > computerScore) {
