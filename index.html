@@ -7,8 +7,25 @@
 </head>
 <script src="game.js"></script>
 <body>
-<button>Rock</button>
-<button>Paper</button>
-<button>Scissors</button>
+<button id="rock">Rock</button>
+<button id="paper">Paper</button>
+<button id="scissors">Scissors</button>
+
+<script>
+    const button1 = document.querySelector("#rock")
+    button1.addEventListener("click", () => {
+    alert('button test')
+  })
+
+  const button2 = document.querySelector("#paper")
+    button2.addEventListener("click", () => {
+    alert('button test')
+  })
+
+  const button3 = document.querySelector("#scissors")
+    button3.addEventListener("click", () => {
+    alert('button test')
+  })
+</script>
 </body>
 </html>
