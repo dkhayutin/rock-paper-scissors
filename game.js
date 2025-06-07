@@ -28,9 +28,18 @@ function playGame(){
 function playRound(humanChoice, computerChoice){
  console.log(computerChoice)
 
+ const myScore = document.querySelector("#results")
+ myScore.textContent = 'My Score = ' + humanScore 
+ //myScore.appendChild(myScore)
+
+ const opponentResults = document.querySelector("#results")
+ const opponentScore = document.createElement("p")
+ opponentScore.textContent = 'Computer Score =' + computerScore 
+ opponentResults.appendChild(opponentScore)
+
   
-    if (humanChoice === button1  &&  computerChoice === 'paper'){
-    return console.log('You lose! Paper beats rock') + computerScore++
+    if ( button1  &&  computerChoice === 'paper'){
+    return opponentScore + computerScore++
   } else if (humanChoice === button2 &&  computerChoice === 'scissors') {
     return console.log('You lose! Scissors, beats paper') + computerScore++
      } else if (humanChoice === button3 && computerChoice   ==='rock') {
