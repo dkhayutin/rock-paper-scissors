@@ -28,9 +28,10 @@ function playGame(){
 function playRound(humanChoice, computerChoice){
  console.log(computerChoice)
 
- const myScore = document.querySelector("#results")
- myScore.textContent = 'My Score = ' + humanScore 
- //myScore.appendChild(myScore)
+const humanResult = document.querySelector("#results")
+const myScore = document.createElement("p")
+myScore.textContent = "My Score = " + humanScore
+humanResult.appendChild(myScore)
 
  const opponentResults = document.querySelector("#results")
  const opponentScore = document.createElement("p")
@@ -38,15 +39,15 @@ function playRound(humanChoice, computerChoice){
  opponentResults.appendChild(opponentScore)
 
   
-    if ( button1  &&  computerChoice === 'paper'){
-    return opponentScore + computerScore++
+    if (humanChoice === button1  &&  computerChoice === 'paper'){
+    return console.log('You lose! Paper Beats Rock')  + computerScore++
   } else if (humanChoice === button2 &&  computerChoice === 'scissors') {
     return console.log('You lose! Scissors, beats paper') + computerScore++
      } else if (humanChoice === button3 && computerChoice   ==='rock') {
         return console.log('You lose! Rock beats scissors') + computerScore++
       } else if (humanChoice === button2  &&  computerChoice === 'rock'){
          return console.log('You win!') + humanScore++
-    }   else if (humanChoice === button3 && computerChoice   ==='paper') {
+    }   else if (humanChoice === button3 && computerChoice === 'paper') {
          return console.log('You win!') + humanScore++
     }   else if (humanChoice === button1 && computerChoice  ==='scissors') {
       return console.log('You win!') + humanScore++
