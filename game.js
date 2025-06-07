@@ -3,17 +3,17 @@ let computerScore = 0;
 
 const button1 = document.querySelector("#rock")
 button1.addEventListener("click", () => {
-  playRound(button1, computerSelection)
+  playRound(button1, getComputerChoice(3))
  })
 
  const button2 = document.querySelector("#paper")
  button2.addEventListener("click", () => {
-  playRound(button2, computerSelection)
+  playRound(button2, getComputerChoice(3))
  })
  
  const button3 = document.querySelector("#scissors")
  button3.addEventListener("click", () => {
-  playRound(button3, computerSelection)
+  playRound(button3, getComputerChoice(3))
  })
  
 
@@ -88,21 +88,13 @@ function getComputerChoice(num){
 //console.log(getComputerChoice(3))
 
 function getHumanChoice(){
-  //  if(string.toLowerCase() === 'rock'){
-  //  return 'rock'
-  //  } else if (string.toLowerCase() ==='paper'){
-  //   return 'paper'
-  //  } else if (string.toLowerCase() ==='scissors'){
-  //   return 'scissors'
-  //  } else {
-  //   return 'Invalid input'
-  //  }
+ 
 
-  if(button1)
-    return console.log('Rock')
-  if (button2) 
-    return console.log ('Paper')
-  if(button3) 
-    return console.log('Scissors')
+  // if(button1)
+  //   return console.log('Rock')
+  // if (button2) 
+  //   return console.log ('Paper')
+  // if(button3) 
+  //   return console.log('Scissors')
 }
 //console.log(getHumanChoice())
