@@ -1,87 +1,71 @@
-let humanScore = 0;
-let computerScore = 0;
+let computerScore = 1;
+let humanScore = 1 ;
 
 const button1 = document.querySelector("#rock")
 button1.addEventListener("click", () => {
   playRound(button1, getComputerChoice(3))
+  getWinner()
  })
 
  const button2 = document.querySelector("#paper")
  button2.addEventListener("click", () => {
   playRound(button2, getComputerChoice(3))
+  getWinner()
  })
  
  const button3 = document.querySelector("#scissors")
  button3.addEventListener("click", () => {
   playRound(button3, getComputerChoice(3))
+  getWinner()
  })
  
 
  const humanSelection = getHumanChoice();
  const computerSelection = getComputerChoice(3);
- 
-function playGame(){
- 
-
-}
 
 function playRound(humanChoice, computerChoice){
  console.log(computerChoice)
 
+
 const humanResult = document.querySelector("#results")
-const myScore = document.createElement("p")
-myScore.textContent = "My Score = " + humanScore
-humanResult.appendChild(myScore)
+const myRound = document.createElement('p')
+myRound.textContent = "You have won and your score = " + humanScore
+
 
  const opponentResults = document.querySelector("#results")
  const opponentScore = document.createElement("p")
- opponentScore.textContent = 'Computer Score =' + computerScore 
- opponentResults.appendChild(opponentScore)
+ opponentScore.textContent = 'Computer has won and computer score is = ' + computerScore 
+
+ const noWinner = document.querySelector("#results")
+ const tiedGame = document.createElement("p")
+ tiedGame.textContent = 'Tied Game'
 
   
     if (humanChoice === button1  &&  computerChoice === 'paper'){
-    return console.log('You lose! Paper Beats Rock')  + computerScore++
+    return opponentResults.appendChild(opponentScore)  + computerScore++
   } else if (humanChoice === button2 &&  computerChoice === 'scissors') {
-    return console.log('You lose! Scissors, beats paper') + computerScore++
+    return opponentResults.appendChild(opponentScore) + computerScore++
      } else if (humanChoice === button3 && computerChoice   ==='rock') {
-        return console.log('You lose! Rock beats scissors') + computerScore++
+        return opponentResults.appendChild (opponentScore) + computerScore++
       } else if (humanChoice === button2  &&  computerChoice === 'rock'){
-         return console.log('You win!') + humanScore++
+         return humanResult.appendChild(myRound) + humanScore++
     }   else if (humanChoice === button3 && computerChoice === 'paper') {
-         return console.log('You win!') + humanScore++
+         return humanResult.appendChild(myRound) + humanScore++
     }   else if (humanChoice === button1 && computerChoice  ==='scissors') {
-      return console.log('You win!') + humanScore++
-  }  else return console.log('It is a tie!')
+      return humanResult.appendChild(myRound) + humanScore++
+  }  else 
+      return noWinner.appendChild(tiedGame)
  
 }
 
-
- // playRound(humanSelection,computerSelection)
-
-
-
-
-
-//  playGame()
-// playGame()
-// playGame()
-// playGame()
-// playGame()
-
-
 function getWinner(){
-  if (humanScore > computerScore) {
-    return console.log ('Congratulation, You are the winner')
-  } else if (humanScore < computerScore ) {
-    return console.log('Sorry, you have lost!')
-  } else  {
-    return console.log ('We have a tie game!')
-  }
+  if(computerScore === 6) {
+  alert('Computer has Won')
+} else if (humanScore === 6) {
+ alert('You have won!')
+} 
+
 }
-
-getWinner()
-
-
 
 function getComputerChoice(num){
   let string = Math.floor(Math.random() * num)
