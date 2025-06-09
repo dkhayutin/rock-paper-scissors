@@ -28,7 +28,7 @@ function playRound(humanChoice, computerChoice){
 
 
 const humanResult = document.querySelector("#results")
-const myRound = document.createElement('p')
+const myRound = document.createElement('p') 
 myRound.textContent = "You have won and your score = " + humanScore
 
 
